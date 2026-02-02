@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    line-height: 1.5;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    height: 10vh;
+}
+
+li {
+    color: white;
+    background-color: black;
+    list-style: none;
+    padding: 2px 5px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+.img img {
+    height: 80vh;
+    width: 40vw;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.about2 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 50vh;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: large;
+    padding: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    padding: 15px;
+}
+.side-img img{
+    height: 45vh;
+}
+.skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.3);
+    height: 45vh;
+    width: 16vw;
+    padding: 10px;
+}
+
+#projects {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.project-card {
+    background-color: #111;
+    border: 1px solid #fff;
+    padding: 18px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #fff;
+    padding: 18px;
+    width: 300px;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.info {
+    font-size: 0.95em;
+    line-height: 1.4;
+    text-align: center;
+}
+#contact {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.contact-card {
+    background-color: #111;
+    border: 1px solid #fff;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}
+
+.contact-info {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Skills</li>
+            <li>Education</li>
+            <li>Project</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+
+    <div class="hero">
+        <div class="img">
+            <img src="img.png" alt="img">
+        </div>
+        <div class="about1">
+            <h1>I write code. Sometimes it works!</h1>
+            <h3>Learning DSA & MERN, one commit at a time</h3>
+        </div>
+    </div>
+    <div class="line"></div>
+
+    <div class="about2">
+        <div class="side-img"><img src="img2..png" alt=""></div>
+        <div class="info">
+            <b> I write code for a living (future plans), and debug it for free (current reality).</b>
+
+            <br>
+
+            I’m a first-year CSE student at UIT-RGPV, Bhopal, focused on DSA and MERN stack development. <br> <b>Solved
+                170+</b>
+            LeetCode problems has taught me logic, patience, and <br> that semicolons matter more than they should.
+            <br>
+
+            I’m also a student volunteer at Persona Club
+            tech department, <br>and outside of code, I enjoy graphic designing and sketching—because
+            not everything needs to compile.
+        </div>
+       
+
+    </div>
+     <section id="education">
+  <h2 class="title">Education</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="name">10th Grade</div>
+      <div class="info">
+        School: Deepak Memorial Academy <br>
+        Year:2023 <br>
+        Grade:94.2%
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="name">12th Grade</div>
+      <div class="info">
+        School: Mother Teresa sen. sec. <br>
+        Year:2025 <br>
+        Grade:90.8%
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="name">(College / Current ) <br> University Institute of Technology RGPV</div>
+      <div class="info">
+        College: <br>
+        Year: Started in 2025 (Expected to end 2029) <br>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+    <div class="skills">
+        <div class="box">
+            <h2>Languages</h2>
+
+
+            HTML, CSS, JavaScript, C++
+        </div>
+
+        <div class="box">
+            <h2>Frontend Framework / Templating</h2>
+            EJS
+        </div>
+        <div class="box">
+            <h2>Backend / Runtime</h2>
+            Node.js, Express.js
+        </div>
+        <div class="box">
+            <h2>Database</h2>
+            SQL, MongoDB
+        </div>
+        <div class="box">
+            <h2>Tools / IDEs</h2>
+            Git, Git Bash, VS Code
+        </div>
+        
+    </div>
+    <section id="projects">
+  <h2 class="section-title">My Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <div class="project-title">To-Do App</div>
+      <div class="project-description">
+        A simple To-Do application to manage tasks. Users can add, mark as complete, and delete tasks.
+      </div>
+      <a href="https://github.com/SANSKRITI01717/TODO_APP" class="project-link" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Event Landing Page</div>
+      <div class="project-description">
+        Created as a Persona task. A landing page for events with basic information and call-to-action buttons.
+      </div>
+      <a href="https://github.com/SANSKRITI01717/persona-club-event" class="project-link" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">RESTful API for Posts</div>
+      <div class="project-description">
+        A backend project to perform CRUD operations on posts. Users can create, read, update, and delete posts.
+      </div>
+      <a href="https://github.com/SANSKRITI01717/quora-rest-app" class="project-link" target="_blank">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact</h2>
+
+  <div class="contact-card">
+    <div class="contact-info">
+      Email: <a href="sanskritishrivastava@gmail.com" class="contact-link">sanskritishrivastava@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+
+</div>
+</body>
+
+</html>
